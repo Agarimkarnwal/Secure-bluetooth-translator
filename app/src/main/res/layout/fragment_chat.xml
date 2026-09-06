@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_primary">
+
+    <!-- Connection Status bar -->
+    <LinearLayout
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/status_connecting"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvConnectionStatus"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="🟡 Connecting…"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnDebugConsole"
+                style="@style/SecondaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:text="🛠 Logs"
+                android:textSize="10sp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="0dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDeviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/tvMyLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+    <!-- Diagnostics & Performance HUD -->
+    <LinearLayout
+        android:id="@+id/diagnosticsHud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#1E1E24"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvDiagnosticsHud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔒 E2EE: Active • Latency: --ms • NPU: Ready"
+            android:textColor="#00FFCC"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-monospace"/>
+
+    </LinearLayout>
+
+    <!-- Message list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"/>
+
+    <!-- Quick replies horizontal bar (Monster Mode Pills) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#141414"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="4dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/quickReplyContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/chipSafe"
+                style="@style/SecondaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginEnd="4dp"
+                android:text="🛡️ I'm Safe"
+                android:textSize="11sp"
+                android:textColor="#4CAF50"/>
+
+            <Button
+                android:id="@+id/chipHelp"
+                style="@style/SecondaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginEnd="4dp"
+                android:text="🚨 Need Help!"
+                android:textSize="11sp"
+                android:textColor="#FF5252"/>
+
+            <Button
+                android:id="@+id/chipOtw"
+                style="@style/SecondaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginEnd="4dp"
+                android:text="🏃 On My Way"
+                android:textSize="11sp"/>
+
+            <Button
+                android:id="@+id/chipMeet"
+                style="@style/SecondaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginEnd="4dp"
+                android:text="📍 Meeting Point"
+                android:textSize="11sp"/>
+
+            <Button
+                android:id="@+id/chipOk"
+                style="@style/SecondaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="👍 OK / Confirmed"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Input bar area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_surface"
+        android:elevation="8dp">
+
+        <!-- Top Action bar inside input area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="6dp">
+
+            <Button
+                android:id="@+id/btnMonsterMode"
+                style="@style/SecondaryButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="32dp"
+                android:layout_marginEnd="6dp"
+                android:text="⚡ Monster Menu"
+                android:textSize="11sp"/>
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/SecondaryButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="32dp"
+                android:layout_marginStart="6dp"
+                android:text="✕ Disconnect"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+        <!-- Message input row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Voice input button -->
+            <ImageButton
+                android:id="@+id/btnVoice"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_bubble_received"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:scaleType="centerInside"
+                android:contentDescription="Voice input"
+                android:tint="@color/accent_orange"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Text input -->
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input_bar"
+                android:hint="Type a message…"
+                android:hintTextColor="@color/text_hint"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:maxLines="4"
+                android:inputType="textMultiLine|textCapSentences"
+                android:imeOptions="actionNone"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"/>
+
+            <!-- Send button -->
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/accent_orange"
+                android:text="➤"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:padding="0dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

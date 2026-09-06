@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Received bubble — left-aligned, dark surface -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="start"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bubble_received"
+        android:maxWidth="280dp">
+
+        <TextView
+            android:id="@+id/tvDisplayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="2dp"/>
+
+        <TextView
+            android:id="@+id/tvOriginalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-light"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvMetaInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#AA888888"
+            android:textSize="9sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="🔒 E2EE • NPU: 12ms"/>
+
+    </LinearLayout>
+
+</LinearLayout>

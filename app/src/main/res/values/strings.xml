@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Setu</string>
+    <string name="app_tagline">Bridge Languages. No Internet.</string>
+
+    <!-- Start screen -->
+    <string name="choose_role">Choose your role</string>
+    <string name="role_host">📡 HOST\nWait for connection</string>
+    <string name="role_joiner">🔍 JOINER\nFind and connect</string>
+    <string name="choose_language">Choose your display language</string>
+    <string name="lang_english">🇬🇧 English</string>
+    <string name="lang_hindi">🇮🇳 Hindi</string>
+    <string name="btn_continue">Continue →</string>
+    <string name="btn_model_setup">⚙️ Model Setup (one-time)</string>
+    <string name="btn_test_translation">🧪 Test Translation</string>
+
+    <!-- Chat screen -->
+    <string name="hint_message">Type a message…</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_monster_mode">⚡ Monster</string>
+    <string name="btn_voice">🎤</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_disconnected">Disconnected</string>
+
+    <!-- Model setup -->
+    <string name="model_setup_title">One-Time Model Setup</string>
+    <string name="model_setup_desc">Download Hindi + English models once (requires Wi-Fi). After downloading, the app works 100% offline — even in airplane mode.</string>
+    <string name="btn_download">Download Models</string>
+    <string name="btn_delete_models">Reset (Delete Models)</string>
+
+    <!-- Translation test -->
+    <string name="translation_test_title">Translation Test</string>
+    <string name="hint_input_text">Type text to translate…</string>
+    <string name="btn_translate">Translate (On-Device)</string>
+    <string name="btn_swap">⇄ Swap Direction</string>
+
+    <!-- Monster mode -->
+    <string name="monster_mode_title">⚡ Monster Mode — Quick Replies</string>
+    <string name="monster_mode_desc">Tap to instantly send a pre-set message (auto-translated)</string>
+
+    <!-- Device scan -->
+    <string name="device_scan_title">Find Other Phone</string>
+    <string name="btn_scan_paired">Show Paired Devices</string>
+    <string name="btn_discover">Start Discovery</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_primary"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧪 Translation Test"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test on-device translation. Turn off Wi-Fi/data first to prove offline."
+        android:textSize="13sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Direction indicator -->
+    <TextView
+        android:id="@+id/tvDirection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Direction: English → Hindi"
+        android:textSize="14sp"
+        android:textColor="@color/accent_orange"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnSwapDirection"
+        style="@style/SecondaryButton"
+        android:text="⇄ Swap Direction"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Input -->
+    <EditText
+        android:id="@+id/etInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:background="@color/bg_surface"
+        android:padding="12dp"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:hintTextColor="@color/text_hint"
+        android:hint="Type text to translate…"
+        android:inputType="textMultiLine|textCapSentences"
+        android:gravity="top"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnTranslate"
+        style="@style/PrimaryButton"
+        android:text="Translate (On-Device ⚡)"
+        android:layout_marginBottom="16dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateTint="@color/accent_orange"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"/>
+
+    <!-- Output -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Output:"
+        android:textSize="13sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:background="@color/bg_surface"
+        android:padding="12dp"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:text=""
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTiming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:text=""/>
+
+</LinearLayout>

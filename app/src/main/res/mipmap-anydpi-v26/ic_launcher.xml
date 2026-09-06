@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/bg_primary"/>
+    <foreground>
+        <inset
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:insetLeft="20%"
+            android:insetRight="20%"
+            android:insetTop="20%"
+            android:insetBottom="20%">
+            <shape android:shape="rectangle">
+                <!-- Placeholder — replace with actual bridge icon -->
+                <solid android:color="@color/accent_orange"/>
+                <corners android:radius="8dp"/>
+            </shape>
+        </inset>
+    </foreground>
+</adaptive-icon>

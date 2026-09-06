@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.setu.app.ui.StartFragment"
+        android:label="Setu"
+        tools:layout="@layout/fragment_start">
+
+        <action
+            android:id="@+id/action_start_to_chat"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_start_to_deviceScan"
+            app:destination="@id/deviceScanFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+
+        <action
+            android:id="@+id/action_start_to_modelSetup"
+            app:destination="@id/modelSetupFragment"/>
+
+        <action
+            android:id="@+id/action_start_to_translationTest"
+            app:destination="@id/translationTestFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/deviceScanFragment"
+        android:name="com.setu.app.ui.DeviceScanFragment"
+        android:label="Connect to Device"
+        tools:layout="@layout/fragment_device_scan">
+
+        <action
+            android:id="@+id/action_deviceScan_to_chat"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/startFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.setu.app.ui.ChatFragment"
+        android:label="Setu Chat"
+        tools:layout="@layout/fragment_chat">
+
+        <argument
+            android:name="role"
+            app:argType="string"
+            android:defaultValue="HOST"/>
+        <argument
+            android:name="myLang"
+            app:argType="string"
+            android:defaultValue="en"/>
+        <argument
+            android:name="deviceName"
+            app:argType="string"
+            android:defaultValue="Remote"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/modelSetupFragment"
+        android:name="com.setu.app.ui.ModelSetupFragment"
+        android:label="Model Setup"
+        tools:layout="@layout/fragment_model_setup"/>
+
+    <fragment
+        android:id="@+id/translationTestFragment"
+        android:name="com.setu.app.ui.TranslationTestFragment"
+        android:label="Translation Test"
+        tools:layout="@layout/fragment_translation_test"/>
+
+</navigation>

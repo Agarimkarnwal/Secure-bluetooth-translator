@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sent bubble — right-aligned, orange accent -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="end"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bubble_sent"
+        android:maxWidth="280dp">
+
+        <TextView
+            android:id="@+id/tvDisplayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:lineSpacingExtra="2dp"/>
+
+        <TextView
+            android:id="@+id/tvOriginalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#AAFFFFFF"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-light"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvMetaInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#DDF0F0F0"
+            android:textSize="9sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="🔒 E2EE • NPU: 12ms"/>
+
+    </LinearLayout>
+
+</LinearLayout>

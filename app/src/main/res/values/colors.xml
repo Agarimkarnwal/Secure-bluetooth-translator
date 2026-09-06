@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background colors -->
+    <color name="bg_primary">#0D0D0D</color>
+    <color name="bg_surface">#1A1A1A</color>
+    <color name="bg_surface_2">#242424</color>
+
+    <!-- Accent — iQOO orange -->
+    <color name="accent_orange">#FF6A00</color>
+    <color name="accent_orange_dark">#CC5500</color>
+    <color name="accent_orange_alpha">#33FF6A00</color>
+
+    <!-- Bubble colors -->
+    <color name="bubble_sent">#FF6A00</color>
+    <color name="bubble_received">#2A2A2A</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#999999</color>
+    <color name="text_hint">#555555</color>
+    <color name="text_on_accent">#FFFFFF</color>
+
+    <!-- Status bar -->
+    <color name="status_connected">#1A6B3A</color>
+    <color name="status_connecting">#7A5A00</color>
+    <color name="status_disconnected">#7A1A1A</color>
+
+    <!-- Input bar -->
+    <color name="input_bg">#1F1F1F</color>
+    <color name="input_stroke">#FF6A00</color>
+
+    <!-- Divider -->
+    <color name="divider">#333333</color>
+
+    <!-- White for icons on dark -->
+    <color name="icon_tint">#FFFFFF</color>
+</resources>
